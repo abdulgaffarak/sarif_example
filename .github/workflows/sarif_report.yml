@@ -8,11 +8,11 @@ on:
 jobs:
   tfsec:
     name: tfsec sarif report
-    runs-on: Ubuntu-18.04 
+    runs-on: ubuntu-latest
 
     steps:
       - name: Clone repo
-        uses: actions/checkout@master
+        uses: actions/checkout@main
 
       - name: tfsec
         uses: tfsec/tfsec-sarif-action@main
