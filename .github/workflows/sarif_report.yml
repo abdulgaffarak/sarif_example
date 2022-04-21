@@ -3,10 +3,10 @@ on:
  pull_request:
 
 jobs:
-  if: ${{ inputs.action == 'plan' }}
   tfsec:
-    name: tfsec-PR-commenter
+    name: tfsec-run
     runs-on: ubuntu-latest
+    if: ${{ inputs.action == 'plan' }}
     steps:
       - name: Clone-repo
         uses: actions/checkout@master
