@@ -1,6 +1,6 @@
 resource "aws_s3_bucket" "bad_bucket" {
     bucket = "bad-bucket"
-    acl= "authenticated-read"
+    acl= "private"
     
     logging{
         target_bucket = "access-logs"
