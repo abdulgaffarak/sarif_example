@@ -22,7 +22,7 @@ jobs:
 
       - name: Check return codes
         if: success() || failure ()
-        run: echo "tfsec run report output -: ${steps.test.tfsec-run-report}"
+        run: echo tfsec run report output ${{steps.test.tfsec-run-report}}
         
 
       - name: tfsec commenter
