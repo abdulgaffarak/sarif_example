@@ -1,11 +1,13 @@
 name: Run Tfsec
 on:
-  if: ${{ inputs.action == 'plan' }}
+ pull_request:
+
 jobs:
-  tfsec:
-    name: tfsec-run
-    runs-on: ubuntu-latest
-    steps:
+ tfsec:
+   name: tfsec-run
+   runs-on: ubuntu-latest
+   if: ${{ inputs.action == 'plan' }}
+   steps:
       - name: Clone-repo
         uses: actions/checkout@master
   
